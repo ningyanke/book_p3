@@ -11,10 +11,12 @@
 * [语句和文件](statement_file/README.md)
     * [语句](statement_file/py3_state.md)
     * [if语句](statement_file/py3_if.md)
-    * [for while语句](statement_file/py3_for.md)
+    * [for while语句](statement_file/py3_for_while.md)
     * [break continue](statement_file/py3_break_continue.md)
     * [zip enumerate简化循环结构](statement_file/py3_zip_enumerate.md)
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
 * [代码](code/README.md)
     * [小乌龟代码](code/turtle_practice.py)
+* [图片](picture/README.md)
+
