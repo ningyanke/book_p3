@@ -17,6 +17,4 @@
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
 * [代码](code/README.md)
-    * [小乌龟代码](code/turtle_practice.py)
 * [图片](picture/README.md)
-
