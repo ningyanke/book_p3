@@ -1,0 +1,557 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>break continue · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="py3_zip_enumerate.html" />
+    
+    
+    <link rel="prev" href="py3_for_while.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../date_types/">
+            
+                <a href="../date_types/">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../date_types/py3_string.html">
+            
+                <a href="../date_types/py3_string.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../date_types/py3_list.html">
+            
+                <a href="../date_types/py3_list.html">
+            
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../date_types/py3_tuple.html">
+            
+                <a href="../date_types/py3_tuple.html">
+            
+                    
+                    元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../date_types/py3_dict.html">
+            
+                <a href="../date_types/py3_dict.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../date_types/py3_set.html">
+            
+                <a href="../date_types/py3_set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../date_types/py3_pack_unpack.html">
+            
+                <a href="../date_types/py3_pack_unpack.html">
+            
+                    
+                    解包打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    语句和文件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="py3_state.html">
+            
+                <a href="py3_state.html">
+            
+                    
+                    语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="py3_if.html">
+            
+                <a href="py3_if.html">
+            
+                    
+                    if语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="py3_for_while.html">
+            
+                <a href="py3_for_while.html">
+            
+                    
+                    for while语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="py3_break_continue.html">
+            
+                <a href="py3_break_continue.html">
+            
+                    
+                    break continue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="py3_zip_enumerate.html">
+            
+                <a href="py3_zip_enumerate.html">
+            
+                    
+                    zip enumerate简化循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Built_in_func/">
+            
+                <a href="../Built_in_func/">
+            
+                    
+                    內建函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Built_in_func/py3_turtle.html">
+            
+                <a href="../Built_in_func/py3_turtle.html">
+            
+                    
+                    turtle 小乌龟
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../code/">
+            
+                <a href="../code/">
+            
+                    
+                    代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../picture/">
+            
+                <a href="../picture/">
+            
+                    
+                    图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >break continue</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h6 id="break&#x548C;continue&#x8BED;&#x53E5;&#x53CA;&#x5FAA;&#x73AF;&#x4E2D;&#x7684;else&#x5B50;&#x53E5;"><code>break</code>&#x548C;<code>continue</code>&#x8BED;&#x53E5;&#x53CA;&#x5FAA;&#x73AF;&#x4E2D;&#x7684;<code>else</code>&#x5B50;&#x53E5;</h6>
+<blockquote>
+<p>&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x8BED;&#x53E5;</p>
+<table>
+<thead>
+<tr>
+<th>&#x63A7;&#x5236;&#x8BED;&#x53E5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>&#x5728;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#xFF0C;&#x5E76;&#x4E14;&#x8DF3;&#x51FA;&#x6574;&#x4E2A;&#x5FAA;&#x73AF;&#x4F53;,&#x4EFB;&#x4F55;&#x5BF9;&#x5E94;&#x7684;else&#x8BED;&#x53E5;&#x90FD;&#x5C06;&#x4E0D;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>&#x5728;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7EC8;&#x6B62;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x5E76;&#x4E14;&#x8DF3;&#x51FA;&#x8BE5;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;</td>
+</tr>
+<tr>
+<td>pass</td>
+<td>pass&#x662F;&#x7A7A;&#x8BED;&#x53E5;&#xFF0C;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#x7684;&#x5B8C;&#x6574;&#x6027;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+break&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF0C;&#x5E76;&#x4E14;&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x5757;
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;Runoob&apos;</span>:M
+   <span class="hljs-keyword">if</span> letter == <span class="hljs-string">&apos;b&apos;</span>:
+       <span class="hljs-keyword">break</span>
+   print(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x5B57;&#x6BCD;&#x4E3A;:&quot;</span>,letter)
+&gt;&gt;
+var = <span class="hljs-number">10</span>
+<span class="hljs-keyword">while</span> var &gt; <span class="hljs-number">0</span>:
+   print(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C;&#x4E3A;&#xFF1A;&quot;</span>,var)
+   var -= <span class="hljs-number">1</span>
+   <span class="hljs-keyword">if</span> var == <span class="hljs-number">5</span>:
+       <span class="hljs-keyword">break</span>
+print(<span class="hljs-string">&quot;good bye&quot;</span>)
+<span class="hljs-string">&quot;&quot;&quot;
+&#x5F53;&#x524D;&#x5B57;&#x6BCD;&#x4E3A;: R
+&#x5F53;&#x524D;&#x5B57;&#x6BCD;&#x4E3A;: u
+&#x5F53;&#x524D;&#x5B57;&#x6BCD;&#x4E3A;: n
+&#x5F53;&#x524D;&#x5B57;&#x6BCD;&#x4E3A;: o
+&#x5F53;&#x524D;&#x5B57;&#x6BCD;&#x4E3A;: o
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C;&#x4E3A;&#xFF1A; 10
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C;&#x4E3A;&#xFF1A; 9
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C;&#x4E3A;&#xFF1A; 8
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C;&#x4E3A;&#xFF1A; 7
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C;&#x4E3A;&#xFF1A; 6
+&#x8DF3;&#x51FA;&#x4E86;&#x6574;&#x4E2A;&#x5FAA;&#x73AF;&#x4F53;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x6CA1;&#x6709;&#x518D;&#x6B21;&#x6267;&#x884C;&#x4E86;
+&quot;&quot;&quot;</span>
+<span class="hljs-comment">#continue&#x8DF3;&#x51FA;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x6267;&#x884C;&#x4E0B;&#x6B21;&#x5FAA;&#x73AF;</span>
+&gt;&gt;
+<span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;Runoob&apos;</span>:  <span class="hljs-comment"># &#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;</span>
+   <span class="hljs-keyword">if</span> letter == <span class="hljs-string">&apos;o&apos;</span>:  <span class="hljs-comment"># &#x5B57;&#x6BCD;&#x4E3A; o &#x65F6;&#x8DF3;&#x8FC7;&#x8F93;&#x51FA;</span>
+       <span class="hljs-keyword">continue</span>
+   print(<span class="hljs-string">&apos;&#x5F53;&#x524D;&#x5B57;&#x6BCD; :&apos;</span>, letter)
+&gt;&gt;
+var = <span class="hljs-number">10</span>  <span class="hljs-comment"># &#x7B2C;&#x4E8C;&#x4E2A;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">while</span> var &gt; <span class="hljs-number">0</span>:
+   var = var - <span class="hljs-number">1</span>
+   <span class="hljs-keyword">if</span> var == <span class="hljs-number">5</span>:  <span class="hljs-comment"># &#x53D8;&#x91CF;&#x4E3A; 5 &#x65F6;&#x8DF3;&#x8FC7;&#x8F93;&#x51FA;</span>
+       <span class="hljs-keyword">continue</span>
+   print(<span class="hljs-string">&apos;&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; :&apos;</span>, var)
+print(<span class="hljs-string">&quot;Good bye!&quot;</span>)
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5F53;&#x524D;&#x5B57;&#x6BCD; : R
+&#x5F53;&#x524D;&#x5B57;&#x6BCD; : u
+&#x5F53;&#x524D;&#x5B57;&#x6BCD; : n
+&#x5F53;&#x524D;&#x5B57;&#x6BCD; : b
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 9
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 8
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 7
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 6
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 4
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 3
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 2
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 1
+&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x503C; : 0
+&#x8DF3;&#x51FA;&#x4E86;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x6267;&#x884C;&#x4E86;&#x4E0B;&#x6B21;&#x5FAA;&#x73AF;
+&apos;&apos;&apos;</span>
+</code></pre>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="py3_for_while.html" class="navigation navigation-prev " aria-label="Previous page: for while语句">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="py3_zip_enumerate.html" class="navigation navigation-next " aria-label="Next page: zip enumerate简化循环结构">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"break continue","level":"1.3.4","depth":2,"next":{"title":"zip enumerate简化循环结构","level":"1.3.5","depth":2,"path":"statement_file/py3_zip_enumerate.md","ref":"statement_file/py3_zip_enumerate.md","articles":[]},"previous":{"title":"for while语句","level":"1.3.3","depth":2,"path":"statement_file/py3_for_while.md","ref":"statement_file/py3_for_while.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"statement_file/py3_break_continue.md","mtime":"2017-11-21T15:26:23.770Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-21T15:37:30.927Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
