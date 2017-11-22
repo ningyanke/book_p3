@@ -415,9 +415,9 @@
 >>'My name is {name},i am {age} old'.format_map(People)
 >># 'My name is john,i am 56 old'
 >>```
-
+>>
 >>######  (3).字符串搜索定位与替换
->>>###### `str.count(sub[, start[, end]])`
+>>###### `str.count(sub[, start[, end]])`
 >>```python
 >>text = 'outer protective covering'
 >>text.count('e')
@@ -527,9 +527,10 @@
 >>a.translate(table)
 >># 'aph hs a ag'
 >>```
-
+>>
 >>###### (4).字符串的联合与分割
 >>>######`str.join(iterable)`
+>>
 >>用指定的字符串，连接元素为字符串的可迭代对象。
 >>```python
 >>'-'.join(['2012', '3', '12'])
@@ -559,6 +560,7 @@
 >>','.join({'dobi':'dog', 'polly':'bird'}.values())
 >># 'dog,bird'
 >>```
+>>
 >>###### `str.partition(sep); str.rpartition(sep)`
 >>```python
 >>'dog wow wow jiao'.partition('wow')
