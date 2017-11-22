@@ -168,7 +168,7 @@
 >Out[31]: 'hello world hello'
 >```
 
->##### (2).可以设置参数.(**kwargs)[打包，解包](./)
+>##### (2).可以设置参数.(**kwargs)[打包，解包](./py3_pack_unpack.md)
 >```python
 >In [32]: print('姓名:{name}，分数:{score}'.format(name='小明',score='70') )
 >姓名:小明，分数:70
@@ -195,7 +195,7 @@
 
 >##### (4).数字格式化
 >数字格式化参照下图设置
->![数字格式化](./number_string.png)
+>![数字格式化](../picture/number_string.png)
 
 ####  5.Python三引号
 >python三引号允许一个字符串跨多行，字符串中可以包含换行符、制表符以及其他特殊字符
