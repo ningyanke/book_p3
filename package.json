@@ -1,3 +1,28 @@
-"scripts"：{
-  "deploy": "gh-pages -d build"
-},
+{
+  "name": "book_p3",
+  "version": "1.0.0",
+  "description": "归档自己写的笔记",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-pug": "^3.3.0",
+    "run-sequence": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ningyanke/book_p3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ningyanke/book_p3/issues"
+  },
+  "homepage": "https://github.com/ningyanke/book_p3#readme"
+}
