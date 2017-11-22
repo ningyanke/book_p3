@@ -341,9 +341,10 @@
 >># '中文ABC DEF 12GH'
 >>```
 >>需要注意的是 s.upper().isupper() 不一定为 True。
-
+>>
 >> ######  (2)字符串格式输出
 >>>###### `str.center(width[, fillchar])`
+>>
 >>将字符串按照给定的宽度居中显示，可以给定特定的字符填充多余的长度，如果指定的长度小于字符串长度，则返回原字符串。
 >>```python
 >>'12345'.center(10, '*')
@@ -391,7 +392,9 @@
 >># 'dddddddd'
 >>```
 >>###### `str.expandtabs(tabsize=8)`
+>>
 >>用指定的空格替代横向制表符，使得相邻字符串之间的间距保持在指定的空格数以内。
+>>
 >>```python
 >>tab = '1\t23\t456\t7890\t1112131415\t161718192021'
 >>
@@ -403,8 +406,9 @@
 >># '1   23  456 7890    1112131415  161718192021'
 >># '12341234123412341234123412341234'
 >>```
->>###### `str.format(^args, ^^kwargs)`
->>###### `str.format_map(mapping)`
+>
+>>######   `str.format(^args, ^^kwargs)`
+>>######   `str.format_map(mapping)`
 >>类似  `str.format(*args, **kwargs)` ，不同的是 `mapping` 是一个字典对象。
 >>```python
 >>People = {'name':'john', 'age':56}
