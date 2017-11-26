@@ -16,8 +16,12 @@
     * [zip enumerate简化循环结构](statement_file/py3_zip_enumerate.md)
 * [函数](function/README.md)
     * [函数](function/py3_func.md)
+    * [函数的定义和语法](./function/py3_func_defin.md)
+    * [函数的调用](./function/py3_func_call.md)
+    * [函数中__name__属性详解](./function/py3_name_attr.md)
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
     * [test](Built_in_func/test.md)
 * [代码](code/README.md)
 * [图片](picture/README.md)
+
