@@ -1,6 +1,7 @@
 # Summary
 
 * [目录](README.md)
+
 * [基本数据类型](date_types/README.md)
     * [字符串](date_types/py3_string.md)
     * [列表](date_types/py3_list.md)
@@ -8,20 +9,30 @@
     * [字典](date_types/py3_dict.md)
     * [集合](date_types/py3_set.md)
     * [解包打包](date_types/py3_pack_unpack.md)
+
 * [语句和文件](statement_file/README.md)
     * [语句](statement_file/py3_state.md)
     * [if语句](statement_file/py3_if.md)
     * [for while语句](statement_file/py3_for_while.md)
     * [break continue](statement_file/py3_break_continue.md)
     * [zip enumerate简化循环结构](statement_file/py3_zip_enumerate.md)
+
 * [函数](function/README.md)
     * [函数](function/py3_func.md)
     * [函数的定义和语法](./function/py3_func_defin.md)
     * [函数的调用](./function/py3_func_call.md)
     * [函数中__name__属性详解](./function/py3_name_attr.md)
+    * [函数参数的传递](./function/py3_func_parameter.md)
+
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
     * [test](Built_in_func/test.md)
+
+* [附录](./remark_note/README.md)
+  * [PEP-3132](./PEP-3132.md)
+
+    ​
 * [代码](code/README.md)
+
 * [图片](picture/README.md)
 
