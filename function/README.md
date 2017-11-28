@@ -1,4 +1,4 @@
-### Python函数
+### Python函数平原
 
 #### [函数的定义和语法](./py3_func_defin.md)
 
@@ -27,9 +27,25 @@
 >
 > 变量的生存周期
 >
-> 函数在Python中是`first-class`对象
+> [函数在Python中是`first-class`对象](./py3_firstclass.md)
 
+### 函数式编程
 
+> 理解函数式编程
+>
+> 高阶函数
+>
+> ​	`filter,map,reduce,sorted`,
+>
+> ​	`map/reduce`
+>
+> Python闭包
+>
+> lambda
+>
+> 生成器
+>
+> 装饰器
 
 
 

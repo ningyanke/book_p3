@@ -164,28 +164,9 @@
 >
 > 当我们调用`a_func()`,首先会看到他的本地作用域(L),变量名`a_var`并没有被定义,所以它会寻找它的上层作用域:(G)全局作用域.然后在输出结果
 >
-> eg.2
->
-> ```python
-> a_var = 'global varriable'
-> def a_func():
->     a_var = 'local varriable'
->     print(a_var,'[a_var inside a_func()]')
->     
-> a_func()
-> print(a_var,'[a_var outside a_func()]')
-> ```
->
-> ```python
-> local varriable', '[a_var inside a_func()]
-> global varriable', '[a_var outside a_func()]
-> ```
->
-> 当我们调用`a_func` 函数时,它先寻找自己的本地作用域,找到了变量`a_var`,所以它的值被输出出来
->
 > eg.3
 >
-> 如果我们使用了`global`关键字,则表明
+> 如果我们使用了`global`关键字,则会掉用全局变量,并且修改全局变量.
 >
 > ```python
 > a_var = 'global varriable'
@@ -205,6 +186,176 @@
 > local value [ a_var outside a_func() ]
 > ```
 >
-> 当我们使用
+> eg.4
+>
+> 但我们必须小心顺序: 如果我们没有明确的告诉Pyhton我们想要使用全局作用域,并尝试修改一个变量的值,那么很容易返回`UnboundLocalError`.(赋值的操作是右侧的先执行)
+>
+> ```python
+> a_var = 1
+>
+> def a_func():
+>     a_var = a_var  + 1
+>     print(a_var, 'a_var inside a_func()')
+>
+> print(a_var, 'a_var outside a_func()')
+>
+> a_func()
+> ```
+>
+> ```python
+> UnboundLocalError: local variable 'a_var' referenced before assignment
+> ```
+>
+> 这是因为,当我们调用`a_func`函数时, 会把变量`a_var` 自动视为本地变量,语句`a_var = a_var +1`这是一个赋值语句,首先他会把后一个`a_var`变量当作是自己的本地作用域的变量,这样我们希望为本地作用域变量`a_var`赋的值却是基于变量本身,而这个变量没有被定义,所以会返回错误,类似我们的python解释器中直接使用一个未知的变量.
+>
+> ###### 2. LEG-`Local,Enclosed,Global Scope`
+>
+> 加上外层嵌套函数时作用域的判断
+>
+> eg.2.1
+>
+> ```python
+> a_var = 'global value'
+>
+> def outer():
+>     a_var = "enclosed value"
+>
+>     def inner():
+>         a_var = "local value"
+>         print(a_var)
+>     inner()
+>
+> outer()
+> ```
+>
+> ```python
+> local value
+> ```
+>
+> 我们调用了`outer()`,它定义了一个局部变量`a_var`(在全局作用域已经存在一个`a_var`).接下来,`outer()`函数调用了`inner()`,该函数也定义了一个名称为`a_var`的变量。在`inner()`内的`print()`函数首先在局部作用域内搜索(L->E)，因此会打印出在局部作用域内所赋的值。
+>
+> 类似于上一节所说的`global`关键字,我们也可以在内部函数中使用`nonlocal`关键字来明确地访问外部(外围函数)作用域的变量，也可以修改它的值。
+>
+> 注意`nonlocal`关键字是在Python 3.x才新加的，而且在Python 2.x中没有实现（目前还没有).
+>
+> eg. 2.2
+>
+> ```python
+> a_var = 'global value'
+>
+> def outer():
+>        a_var = 'local value'
+>        print('outer before:', a_var)
+>        def inner():
+>            nonlocal a_var
+>            a_var = 'inner value'
+>            print('in inner():', a_var)
+>        inner()
+>        print("outer after:", a_var)
+> outer()
+> ```
+>
+> ```python
+> outer before: local value
+> in inner(): inner value
+> outer after: inner value
+> ```
+>
+> ###### 3. LEGB-`lcoal,Enclosed,Global,Built-in`
+>
+> eg. 3.1
+>
+> ```python
+> a_var = 'global variable'
+>
+> def len(in_var):
+>     print('called my len() function')
+>     l = 0
+>     for i in in_var:
+>         l += 1
+>     return l
+>
+> def a_func(in_var):
+>     len_in_var = len(in_var)
+>     print('Input variable is of length', len_in_var)
+>
+> a_func('Hello, World!')
+> ```
+>
+> ```python
+> called my len() function
+> Input variable is of length 13
+> ```
 
- 
+##### 总结
+
+> 在实践中,修改函数范围内的全局变量通常是一个坏注意,因为这经常造成混乱或者很难调试的奇怪错误.如果你想要通过一个函数来修改一个全局变量,建议把它作为一个变量传入，然后重新指定返回值.
+>
+> 比如:
+>
+> ```python
+> a_var = 2
+>
+> def a_func(some_var):
+>     return 2**3
+>
+> a_var = a_func(a_var)
+> print(a_var)
+> ```
+>
+> ```python
+> 8
+> ```
+
+##### For循环变量泄漏到全局命名空间
+
+> Python中的for循环会使用它所在的作用域,而且把它所定义的循环变量加在后面.
+>
+> ```python
+> for a in range(5):
+>     if a == 4:
+>         print(a, '-> a in for-loop')
+> print(a, '-> a in global')
+> ```
+>
+> ```python
+> 4 -> b in for-loop
+> 4 -> b in global
+> ```
+>
+> **如果我们提前在全局命名空间中明确定义了for循环变量，也是同样的结果！**在这种情况下，它会重新绑定已有的变量
+>
+> ```python
+> b = 1
+> for b in range(5):
+>     if b == 4:
+>         print(b, '-> b in for-loop')
+> print(b, '-> b in global')
+>
+>
+> 4 -> b in for-loop
+> 4 -> b in global
+> ```
+>
+> 不过，在**Python 3.x**中，我们可以使用闭包来防止for循环变量进入全局命名空间
+>
+> ```python
+> i = 1
+> print([i for i in range(5)])
+> print(i, '-> i in global')
+> ```
+>
+> ```python
+> [0, 1, 2, 3, 4]
+> 1 -> i in global
+> ```
+>
+> 为什么要强调“Python 3.x”？因为在Python 2.x下执行同样的代码，打印结果是：
+>
+> ```python
+> 4 -> i in global
+> ```
+
+资料来源:
+
+[LEGB GUIDE](http://sebastianraschka.com/Articles/2014_python_scope_and_namespaces.html) 

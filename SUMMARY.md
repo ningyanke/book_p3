@@ -23,6 +23,13 @@
     * [函数的调用](./function/py3_func_call.md)
     * [函数中__name__属性详解](./function/py3_name_attr.md)
     * [函数参数的传递](./function/py3_func_parameter.md)
+    * [函数的作用域](./py3_fuc_namespace.md)
+      * [函数的命名空间](./py3_func_namespace.md)
+      * [函数的生存周期](./py3_life_time.md)
+      * [函数是first-class对象](./py3_firstclass.md)
+    * [函数式编程](./py3_programe.md)
+      * [高阶函数](./py3_high_order_function.md)
+        * [map,reduce](./py3_map_reduce.md)
 
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
