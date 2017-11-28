@@ -262,15 +262,28 @@
 > eg. 3 利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456：
 >
 > ```python
-> c=len(s)-1-s.index('.')
-> s=s.replace('.','')
-> def str2int(a):
->     def fn(x, y):
->         return x * 10 + y
->     def char2num(a):
->         return {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}[a]
->     return reduce(fn, map(char2num, a))
-> return str2int(s)/(10**c)
+> from functools import reduce
+>
+> a = '123.456'
+>
+> def foo(x,y):
+>     return x*10 + y
+>
+> def main(ch_nu):
+>     def foo1(x):
+>         return int(x)
+>
+>     def foo3(x):
+>         return int(x)/1000
+>
+>     def foo2(x1,x2):
+>         x1 = reduce(foo,map(foo1,x1))
+>         x2 = reduce(foo,map(foo3,x2))
+>         print(x1 + x2)
+>
+>     return foo2(*ch_nu)
+>
+> main(a.split("."))
 > ```
 >
 > 
