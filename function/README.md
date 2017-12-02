@@ -29,13 +29,12 @@
 >
 > [函数在Python中是`first-class`对象](./py3_firstclass.md)
 >
-> [函数的闭包](./py3_func_closure.md)
 
 #### 函数高级特性
 
-> 迭代
+> [迭代-Iteration](./py3_func_iteration.md)
 >
-> 生成器
+> [生成器-generator](./py3_func_generator.md)
 >
 > 迭代器
 
@@ -43,15 +42,21 @@
 
 > 理解函数式编程
 >
-> 高阶函数
+> [高阶函数](./py3_high_order_function.md)
 >
 > ​	`filter,map,reduce,sorted`,
 >
 > ​	[`map/reduce`](./py3_map_reduce.md)
 >
-> ​	[filter](./py3_filter)
+> ​	[filter](./py3_filter.md)
 >
-> lambda
+> ​	[sorted](./py3_func_sorted.md)
+>
+> ​	[综合计算](./py3_jiecheng.md)
+>
+> [函数的闭包](./py3_func_closure.md)
+>
+> [lambda](./py3_func_lambda.md)
 >
 > 装饰器
 
