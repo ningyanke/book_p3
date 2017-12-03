@@ -34,13 +34,13 @@
 
 > [迭代-Iteration](./py3_func_iteration.md)
 >
-> [生成器-generator](./py3_func_generator.md)
+> [生成器-Generator](./py3_func_generator.md)
 >
-> 迭代器
+> [迭代器-Iterator](./py3_func_iterator.md)
 
 #### 函数式编程
 
-> 理解函数式编程
+> [理解函数式编程](./py3_programe.md)
 >
 > [高阶函数](./py3_high_order_function.md)
 >
@@ -58,7 +58,9 @@
 >
 > [lambda](./py3_func_lambda.md)
 >
-> 装饰器
+> [装饰器](./py3_func_decorator.md)
+>
+> ​	[装饰器参考](./py3_decorator/cankao_cn_decorator.md)
 
 
 
