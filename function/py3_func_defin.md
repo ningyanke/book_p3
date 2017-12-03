@@ -6,13 +6,13 @@
 >
 > 一般会有输入参数并有返回值，提供对过程的封装和细节的隐藏。这些代码通常被集成为[软件库](https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%BA%93)。
 >
-> 函数在[面向过程](https://zh.wikipedia.org/wiki/%E7%A8%8B%E5%BA%8F%E7%B7%A8%E7%A8%8B)的语言中已经出现。是结构（Struct）和[类](https://zh.wikipedia.org/wiki/%E7%B1%BB)（Class）的前身。本身就是对具有相关性语句的归类和对某过程的抽象                                                                                    摘自维基百科
+> 函数在[面向过程](https://zh.wikipedia.org/wiki/%E7%A8%8B%E5%BA%8F%E7%B7%A8%E7%A8%8B)的语言中已经出现。是结构（Struct）和[类](https://zh.wikipedia.org/wiki/%E7%B1%BB)（Class）的前身。本身就是对具有相关性语句的归类和对某过程的抽象                                                                                    ----摘自维基百科
 
 ####  Python中的定义
 
 > 函数是Python为了代码最大程度的复用和最小代码的冗余而提供的基本程序结构.
 >
-> 函数是一种设计工具,它能够让程序员将复杂的系统费解为管理的部分.函数可以将相关功能打包,并参数化
+> 函数是一种设计工具,它能够让程序员将复杂的系统分解为可管理的多个部分.函数可以将相关功能打包,并参数化
 
 #### 在Python中可以创建4种函数:
 
@@ -85,7 +85,7 @@ def function(paraeters):
 > The Python None object, denoting lack of value. This object has no methods. It needs to be treated just like any other object with respect to reference counts.
 > ```
 >
-> `None`不是0,也不是空字符串,它有自己的数据类型,这表示无法其他数据类型使用`is`判断.在布尔值中,`None`即为`false`
+> `None`不是0,也不是空字符串,它有自己的数据类型,这表示无法和其他数据类型使用`is`判断.在布尔值中,`None`即为`false`
 >
 > ```python
 > In [26]: None == 0 

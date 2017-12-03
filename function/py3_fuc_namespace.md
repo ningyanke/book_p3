@@ -12,16 +12,12 @@
 > globals()
 >     Return the dictionary containing the current scope's global variables.
 >     
->     NOTE: Updates to this dictionary *will* affect name lookups in the current
->     global scope and vice-versa.
+>     NOTE: Updates to this dictionary *will* affect name lookups in the current global scope and vice-versa.
 >     
 > locals()
 >     Return a dictionary containing the current scope's local variables.
 >     
->     NOTE: Whether or not updates to this dictionary will affect name lookups in
->     the local scope and vice-versa is *implementation dependent* and not
->     covered by any backwards compatibility guarantees.
->
+>     NOTE: Whether or not updates to this dictionary will affect name lookups in the local scope and vice-versa is *implementation dependent* and not covered by any backwards compatibility guarantees.
 > ```
 >
 > 实例
@@ -66,9 +62,9 @@
 >
 > #####  `Namespace`
 >
-> `namespace`  只是将变量名映射到对象的容器.Python中的所有一切,都是对象(`literals,list,tuple.dict,functions,class`等).像这样的`name-to-object`的映射,允许我们通过分配给对象(object)的名字(name)来访问对象,比如,我们创建了一个简单的字符串`a string = "hello world"` 我们创建了一个对该`hello world`对象的引用(name),然后我们通过变量名`a_string`来访问它.
+> `namespace`  只是将变量名映射到对象的容器.Python中的所有一切,都是对象(`string,list,tuple,dict,functions,class`等).像这样的`name-to-object`的映射,允许我们通过分配给对象(object)的名字(name)来访问对象,比如,我们创建了一个简单的字符串`a_string = "hello world"` 我们创建了一个对该`hello world`对象的引用(name),然后我们通过变量名`a_string`来访问它.
 >
-> 在Python中用字典来便是一个命名空间,命名空间中保存了变量(name)和对象(object)的映射关系,比如:
+> 在Python中用字典来表示一个命名空间,命名空间中保存了变量(name)和对象(object)的映射关系,比如:
 >
 > ```python
 > a_namespace = {'name_a':object1,'name_b':object2,.....}
@@ -166,7 +162,7 @@
 >
 > eg.3
 >
-> 如果我们使用了`global`关键字,则会掉用全局变量,并且修改全局变量.
+> 如果我们使用了`global`关键字,则会调用全局变量,并且修改全局变量.
 >
 > ```python
 > a_var = 'global varriable'
