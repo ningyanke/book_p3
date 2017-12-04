@@ -1,3 +1,39 @@
 {
-  "plugins": ["mermaid-gb3"]
+    "title": "学习笔记",
+    "description": "自我学习笔记",
+    "extension": null,
+    "generator": "site",
+    "isbn": null,
+    "links": {
+        "sharing": {
+            "all": null,
+            "facebook": null,
+            "google": null,
+            "twitter": null,
+            "weibo": null
+        },
+        "sidebar": {
+            "NING's BLOG":"http://www.kningyuan.cn"
+        }
+    },
+    "output": null,
+    "pdf": {
+        "fontSize": 12,
+        "footerTemplate": null,
+        "headerTemplate": null,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": false,
+        "paperSize": "a4"
+    },
+    "plugins": [
+        "mermaid-gb3"
+
+    ],
+    
+    "variables": {}
 }
