@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "归档自己写的笔记",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "gitbook-plugin-mermaid-gb3": "^2.1.0"
+  },
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",

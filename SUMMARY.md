@@ -41,8 +41,9 @@
       * [函数的闭包](./function/py3_func_closure.md)
       * [lambda](./function/py3_func_lambda.md)
       * [装饰器](./function/py3_func_decorator.md)
-        * [装饰器参考1](./function/py3_decorator/cankao_cn_decorator.md)
-        * [装饰器参考2](./function/py3_decorator/cankao_en_decorator.md)
+      * [装饰器参考1](./function/py3_decorator/cankao_cn_decorator.md)
+      * [装饰器参考2](./function/py3_decorator/cankao_en_decorator.md)
+      * [递归函数](./function/py3_recursion.md)
 
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
@@ -52,7 +53,10 @@
   * [PEP-3132](./PEP-3132.md)
 
     ​
+
 * [代码](code/README.md)
+
+    * [斐波那契数列](./code/Fibonacci.md)
 
 * [图片](picture/README.md)
 
