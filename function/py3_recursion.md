@@ -295,3 +295,91 @@
 
 > [斐波那契](../code/Fibonacci.md)
 
+### 二元查找(binary search)
+
+> 二元查找针对的是一个有序的序列.
+>
+> 它的定义是:
+>
+> ```markdown
+> 1.把一个有序序列平均二分
+> 2.如果上下限相同,那么就在数字所在位置返回
+> 3.否则找到两者的重点(上下限的平均值),查找数字是在左侧还是在右侧,继续查找数字所在的那一部分
+> ```
+>
+> 它的逻辑图为:
+>
+> ![binary_search](../picture/binary_search1.png)
+>
+> 他的关键在于`START <= END` ,只有满足这个条件,才能得到返回值,所以利用条件判断可以写为:
+>
+> ```python
+> alist = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+>
+>
+> def main(fin_nu, lit):
+>     start = 0
+>     end = len(lit)
+>     while start <= end:
+>         middle = (start + end) // 2
+>         if lit[middle] == fin_nu:
+>             break
+>         elif lit[middle] > fin_nu:
+>             end = middle - 1
+>         else:
+>             start = middle + 1
+>
+>     if start <= end:
+>         print("找到了,第 %d 个数是 %d" % (middle + 1, fin_nu))
+>     else:
+>         print("没有找到{}".format(fin_nu))
+>
+>
+> main(3, alist)
+> ```
+>
+> 从定义出发,二元查找也是完全满足于**递归** 的操作的:
+>
+> ```python
+> def foo(fin_nu, lit, start, end):
+>     if start == end:
+>         assert fin_nu == lit[end]
+>         return end
+>     else:
+>         middle = (start + end) // 2
+>         if lit[middle] > fin_nu:
+>             return foo(fin_nu, lit, 0, middle - 1)
+>         else:
+>             return foo(fin_nu, lit, middle + 1, end)
+>
+>
+> print("index 索引值是")
+> print(foo(3, alist, 0, len(alist)))
+> ```
+>
+> 或者:
+>
+> ```python
+>
+> def foo1(fin_nu, lit):
+>     start = 0
+>     end = len(lit) - 1
+>     middle = (start + end) // 2
+>     if lit:
+>         if lit[middle] > fin_nu:
+>             return foo1(fin_nu, lit[:middle])
+>         elif lit[middle] < fin_nu:
+>             return foo1(fin_nu, lit[(middle + 1):])
+>         else:
+>             print("索引值为")
+>             return middle
+>     else:
+>         print("找不到值")
+>
+>
+> print(foo1(3, alist))
+>
+> ```
+>
+> 
+
