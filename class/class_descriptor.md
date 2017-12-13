@@ -99,7 +99,7 @@
 > delete self <__main__.Description1 object at 0x7f0b221e56d8>
 > ```
 
-#### 3.描述器可以用来做上面
+#### 3.描述器可以用来做什么
 
 > [stackoverflow](https://stackoverflow.com/questions/3798835/understanding-get-and-set-and-python-descriptors)这里做了很多详细的说明,简单的来说,基于描述符的`@classmethod` `@staticmethod` ,`property` 等等,它还可以用来节约内存`__slots` ,或者做数据库的`orm` 等等.
 
@@ -255,7 +255,10 @@
 >     return v
 > ```
 >
-> 其中有重要的几点
+> 注释:`object.__getattribute__` 相当于`__dict__` 见[这里](./class_intercept.md)
+>
+> ]其中有重要的几点
+>
 > - **描述器的调用是因为`__getattribute__()`**
 >
 > - **重写`__getattribute__()`方法会阻止正常的描述器调用**
