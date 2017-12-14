@@ -126,7 +126,7 @@
 >
 > 
 >
-> 现在我的类Count有 `__getattr__`方法。现在，当我尝试访问 ` obj1.mycurrent` 属性 - python返回我无论我已经在我的__getattr__方法实现。在我的示例中，每当我尝试调用一个不存在的属性时，python都会创建该属性并将其设置为整数值0。
+> 现在我的类Count有 `__getattr__`方法。现在，当我尝试访问 ` obj1.mycurrent` 属性,会创建一个新的值.在我的示例中，每当我尝试调用一个不存在的属性时，python都会创建该属性并将其设置为整数值0。
 >
 > ```python
 > class Count:
@@ -146,7 +146,7 @@
 >
 > ##### `__getattribute__`
 >
-> 现在让我们看看这个__getattribute__方法。如果你__getattribute__的类中有 方法，python会为每个属性调用这个方法，不管它是否存在。那么为什么我们需要__getattribute__方法？一个很好的理由是，您可以防止访问属性并使其更安全，如以下示例所示。
+> 现在让我们看看这个`__getattribute__` 方法。如果你`__getattribute__`的类中有 方法，python会为每个属性调用这个方法，不管它是否存在。那么为什么我们需要`__getattribute__`方法？一个很好的理由是，您可以防止访问属性并使其更安全，如以下示例所示。
 >
 > 每当有人试图访问我的属性，以子字符串开始“cur” python引发AttributeError异常。否则，它返回该属性。
 >
@@ -172,11 +172,11 @@
 >  ```
 >
 >
-> 重要：为了避免__getattribute__方法中的无限递归，它的实现应该总是调用具有相同名字的基类方法来访问它所需要的任何属性。例如：object.__getattribute__(self, name)或 super().__getattribute__(item)而不是self.__dict__[item]
+> 重要：为了避免__getattribute__方法中的无限递归，它的实现应该总是调用具有相同名字的基类方法来访问它所需要的任何属性。例如：`object.__getattribute__(self, name)`或` super().__getattribute__(item)`而不是`self.__dict__[item]`
 >
 > 重要
 >
-> 如果你的类同时包含getattr和getattribute魔术方法，那么  __getattribute__首先调用它。但是，如果  __getattribute__引发  AttributeError异常，则该异常将被忽略，__getattr__方法将被调用。看下面的例子：
+> 如果你的类同时包含`getattr`和`getattribute`魔术方法，那么 ` __getattribute__`首先调用它。但是，如果`  __getattribute__`引发  AttributeError异常，则该异常将被忽略，`__getattr__`方法将被调用。看下面的例子：
 >
 >  ```python
 > class Count(object):
