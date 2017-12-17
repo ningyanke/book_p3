@@ -79,7 +79,7 @@
 
 ####  3.不重写`object.__getattribute__(self, name)`
 
-> 对于一个普通定义的类,我们没有重写`__getattribute__` ,默认全部继承自`object ` 类,它的`__getattribute` 中默认返回的是`__dict__` 中的值,也就是实例`A.x`,会先去寻找`__getattribute__` ,但是返回项目是 `object.__getattribute__(self,name)` ,转向了`object.__dict__[name]`
+> 对于一个普通定义的类,我们没有重写`__getattribute__` ,默认全部继承自`object ` 类,`__getattribute__` 
 >
 > ```python
 > In [1]: class Test:
