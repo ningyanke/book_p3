@@ -52,7 +52,10 @@
 * [附录](./remark_note/README.md)
   * [PEP-3132](./PEP-3132.md)
 
-    ​
+* [Anoconda](./Anoconda/.README.MD)
+  * [Jupyter Notebook](./Anoconda/Jupyter/README.md)
+    * [Jupter_learn](./Anoconda/Jupyter/10001.md)
+
 
 * [代码](code/README.md)
 
