@@ -14,3 +14,6 @@
 
 > [如何调用魔法函数](./class_call_magic.md)
 
+### 索引和切片举例
+
+> [索引和切片](./class_getitem_setitem.md)

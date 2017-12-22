@@ -1,7 +1,6 @@
 # Summary
 
 * [目录](README.md)
-
 * [基本数据类型](date_types/README.md)
     * [字符串](date_types/py3_string.md)
     * [列表](date_types/py3_list.md)
@@ -9,14 +8,12 @@
     * [字典](date_types/py3_dict.md)
     * [集合](date_types/py3_set.md)
     * [解包打包](date_types/py3_pack_unpack.md)
-
 * [语句和文件](statement_file/README.md)
     * [语句](statement_file/py3_state.md)
     * [if语句](statement_file/py3_if.md)
     * [for while语句](statement_file/py3_for_while.md)
     * [break continue](statement_file/py3_break_continue.md)
     * [zip enumerate简化循环结构](statement_file/py3_zip_enumerate.md)
-
 * [函数](./function/README.md)
     * [函数](./function/py3_func.md)
     * [函数的定义和语法](./function/py3_func_defin.md)
@@ -44,14 +41,26 @@
       * [装饰器参考1](./function/py3_decorator/cankao_cn_decorator.md)
       * [装饰器参考2](./function/py3_decorator/cankao_en_decorator.md)
       * [递归函数](./function/py3_recursion.md)
-
+* [类class](./class/README.md)
+    * [类的命名空间,字典和继承树](./class/class_namespace_tree.md)
+    * [类定义,类对象,实例对象,和方法对象](./class/class_basic.md)
+    * [类方法也是属性](./class/class_method_attribute.md)
+    * 类继承
+    * 迭代器
+    * 生成器
+    * 方法是对象(绑定方法)
+    * [运算符重载](./class/class_magic/class_magic_guid.md)
+      * [常见内置运算符](./class/class_magic/class_call_magic.md)
+      * [迭代器方法](./class/class_magic/class_iter.md)
+      * [属性拦截](./class/class_intercept.md)
+      * [描述符指南](./class/class_descriptor.md)
+    * 类的私有属性
+    * 元编程
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
     * [test](Built_in_func/test.md)
-
 * [附录](./remark_note/README.md)
   * [PEP-3132](./PEP-3132.md)
-
 * [Anoconda](./Anoconda/.README.MD)
   * [Jupyter Notebook](./Anoconda/Jupyter/README.md)
     * [Jupter_learn](./Anoconda/Jupyter/10001.md)

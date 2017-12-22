@@ -57,6 +57,54 @@
 >
 > **类是实例的工厂,通过类可以生成多个实例,每个实例都拥有自己的命名空间,命名空间互不影响**
 
+### 命名空间进阶
+
+> 点号运算符(object.attribute) 和无点号运算符(赋值运算)的变量名,会有不同的处理方式,而有些作用域但是用于对对象命名空间做初始化设定的.
+>
+> 无点号运算(赋值运算):
+>
+> * 使变量名成为本地变量,在当前作用域中,创建或改变变量名X,除非声明它是全局变量
+>
+> 点号运算(object.attribute)
+>
+> * 在当前作用域内搜索变量名X,之后是任何以及素有的嵌套的函数中,然后在当前的全局作用域中搜索,最后在内置作用域中搜索
+>
+> 一个综合例子
+>
+> ```python
+> # manyname.py
+>
+> x = 11    # global 
+>  
+> def f():   # access golbal x 
+>     print(x)
+>
+> def g():
+>     x = 22    # 函数的本地变量 x 
+>     print(x)
+>
+> class C:
+>     x = 33      # class local x 
+>     def m(self):
+>         x = 44  # 方法的本地边淋
+>         self.x = 55
+>         
+> if __name__ == "__main__":
+>     print(x)  #  全局变量   11
+>     f()      # 函数调用, 全局变量 11
+>     g()      # 函数调用, 函数本地变量 11
+>     print(x)   # 全局变量,   11
+>     obj  = C()  # 实例化类
+>     print(obj.x)  # 类的本地变量  33
+>     obj.m()    # 调用方法,生成 实例自己的属性 
+>     print(obj.x)  # 调用了实例属性  x 55
+>     print(C.x)   # 类的本地变量  33
+> #     print(C.m.x)  只能函数的作用域内部使用,
+> #     print(g.x)
+> ```
+>
+> 
+
 ### 类和字典的关系
 
 > 命名空间对象的属性通常都以字典的形式实现的.而类树只是连接到其他字典的字典而已
@@ -117,7 +165,7 @@
 >
 > 实例会各自产生自己的独立命名空间,而且和类的命名空间不冲突.
 >
-> 类树的搜索是根据命名空间的链接进行的搜索.
+> 类树的搜索是根据**命名空间的链接**进行的搜索.
 >
 > ```python
 > class A:
@@ -159,7 +207,6 @@
 > print(B.__mro__)
 > ```
 >
-> 
 
 ### 类树(Method Resolution Order，或MRO)
 
@@ -268,3 +315,61 @@
 >
 >   The [qualified name](https://docs.python.org/3/glossary.html#term-qualified-name) of the class, function, method, descriptor, or generator instance.
 
+### 利用特殊属性遍历类的命名空间
+
+> `__class__` 和`__bases__` 这两个特殊属性可以在程序中查看继承层次,可以利用这两个特殊函数,来生成一个显示树结构的模块
+>
+> ```python
+> def classtree(cls, indent):
+>     print("." * indent + cls.__name__)
+>     for supercls in cls.__bases__:
+>         classtree(supercls, indent + 3)
+>
+>
+> def instancetree(inst):
+>     print("Tree of %s" % inst)
+>     classtree(inst.__class__, 3)
+>
+>
+> def selftest():
+>     class A: pass
+>
+>     class B(A): pass
+>
+>     class C(A): pass
+>
+>     class D(B, C): pass
+>
+>     class E:  pass
+>
+>     class F(D, E):  pass
+>
+>     instancetree(B())
+>     instancetree(F())
+>
+>
+> if __name__ == "__main__":
+>     selftest()
+> ```
+>
+> 打印:
+>
+> ```python
+> Tree of <__main__.selftest.<locals>.B object at 0x000000000262A978>
+> ...B
+> ......A
+> .........object
+> Tree of <__main__.selftest.<locals>.F object at 0x000000000262A978>
+> ...F
+> ......D
+> .........B
+> ............A
+> ...............object
+> .........C
+> ............A
+> ...............object
+> ......E
+> .........object
+> ```
+>
+> 定义了一个递归函数,它会调用`__name__` 打印类的名称,然后调用自身然后再到超类,这样可以让函数遍历任意形状的类树.递归到地段,然后再具有空的`__bases__` 属性组超类停止.
