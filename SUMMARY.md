@@ -48,10 +48,11 @@
     * 类继承
     * 迭代器
     * 生成器
-    * 方法是对象(绑定方法)
+    * [方法是对象(绑定方法)](./class/class_bound_function.md)
     * [多态,抽象基类 ](./class/class_polymorphism.md)
     * [Python可调用对象](./class/class_callable.md)
     * [内置函数 `__call__` 和函数装饰器](./class/class_magic/class_call_method.md)
+    * [静态方法,类方法](./class/class_static_classmethod.md)
     * [运算符重载](./class/class_magic/class_magic_guid.md)
       * [常见内置运算符](./class/class_magic/class_call_magic.md)
       * [迭代器方法](./class/class_magic/class_iter.md)

@@ -109,19 +109,17 @@
 > ```python
 > def method_friendly_decorator(method_to_decorate):
 > 	def wrapper(self, lie):
-> 		lie = lie - 3 # very friendly, decrease age even more :-)
+> 		lie = lie - 3 
 > 		return method_to_decorate(self, lie)
 > 	return wrapper
 >
->
 > class Lucy(object):
->
-> def __init__(self):
-> 	self.age = 32
->
-> @method_friendly_decorator
-> def sayYourAge(self, lie):
-> 	print("I am {0}, what did you think?".format(self.age + lie))
+> 	def __init__(self):
+> 		self.age = 32
+> 	
+> 	@method_friendly_decorator
+> 	def sayYourAge(self, lie):
+> 		print("I am {0}, what did you think?".format(self.age + lie))
 >
 > l = Lucy()
 > l.sayYourAge(-3)
@@ -129,3 +127,44 @@
 > ```
 >
 > 如果要写一个通用的装饰器-可用于任何函数或方法，而不必考虑其参数-那么，用`*args`,` **kwargs`就好了：
+>
+> ```python
+>
+> def a_decorator_passing_arbitrary_arguments(function_to_decorate):
+>     def wrapper(*args, **kwargs):
+>         print("Do I have args?")
+>         print(args)
+>         print(kwargs)
+>         return function_to_decorate(*args, **kwargs)
+>     return wrapper
+>
+> @a_decorator_passing_arbitrary_arguments
+> def function_with_no_argument():
+>     print("Python is cool , no argument here")
+>
+>
+> @a_decorator_passing_arbitrary_arguments
+> def function_with_argument(a, b, c):
+>     print(a, b, c)
+>
+> @a_decorator_passing_arbitrary_arguments
+> def function_with_named_argument(a, b, c, platypus="why not?"):
+>     print("Do {} , {} and {} like platypus?".format(a, b, c, platypus))
+>     
+> class Mary:
+>     def __init__(self):
+>         self.age = 31
+>
+>     @a_decorator_passing_arbitrary_arguments
+>     def sayYouage(self, lie=-3):
+>         print("I am {} ,what did you think?".format(lie))
+>         
+> if __name__ == "__main__":
+>     function_with_no_argument()   
+>     function_with_argument(1,2,3)
+>     function_with_named_argument("bill", "linus", "steve", platypus="Indeed!")
+>     m = Mary()
+>     m.sayYouage()
+> ```
+>
+> 
