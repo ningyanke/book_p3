@@ -60,6 +60,18 @@
       * [描述符指南](./class/class_descriptor.md)
     * 类的私有属性
     * 元编程
+* [文件](./files/README.md)
+    * [文件操作](./files/file_input_output.md)
+* [Python 编程之计算生态](./computational_thinking/README.md)
+    * [计算思维](./computational_thinking/compu_thinking.md)
+    * [自顶向下的设计](top_to_bottom.md)
+    * [自底向上的执行]()
+    * [软件开发基础-软件开发方法]()
+    * [软件开发基础-敏捷开发方法]()
+    * [面向过程的程序设计]
+    * [面向对象的程序设计]
+    * [面向对象实例]
+    * [面向对象特点]
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
     * [test](Built_in_func/test.md)
