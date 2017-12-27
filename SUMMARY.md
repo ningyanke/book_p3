@@ -73,7 +73,7 @@
     * [面向对象实例](./computational_thinking/10013.md)
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
-    * [test](Built_in_func/test.md)
+    * [os](./Built_in_func/py3_os.md)
 * [GUI](./GUI/README.md)
     * ​
 * [第三方库](./other_model/README.md)
