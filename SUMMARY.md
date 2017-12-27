@@ -64,17 +64,21 @@
     * [文件操作](./files/file_input_output.md)
 * [Python 编程之计算生态](./computational_thinking/README.md)
     * [计算思维](./computational_thinking/compu_thinking.md)
-    * [自顶向下的设计](top_to_bottom.md)
-    * [自底向上的执行]()
-    * [软件开发基础-软件开发方法]()
-    * [软件开发基础-敏捷开发方法]()
-    * [面向过程的程序设计]
-    * [面向对象的程序设计]
-    * [面向对象实例]
-    * [面向对象特点]
+    * [自顶向下的设计](./computational_thinking/top_to_bottom.md)
+    * [自底向上的执行](./computational_thinking/bottom_to_top.md)
+    * [软件开发基础-软件开发方法](./computational_thinking/software_method1.md)
+    * [软件开发基础-敏捷开发方法](./computational_thinking/software_method2.md)
+    * [面向过程的程序设计](./computational_thinking/10011.md)
+    * [面向对象的程序设计](./computational_thinking/10012.md)
+    * [面向对象实例](./computational_thinking/10013.md)
 * [內建函数](Built_in_func/README.md)
     * [turtle 小乌龟](Built_in_func/py3_turtle.md)
     * [test](Built_in_func/test.md)
+* [GUI](./GUI/README.md)
+    * ​
+* [第三方库](./other_model/README.md)
+    * [jieba](./other_model/jieba.md)
+    * [pyinstaller](./other_model/pyinstaller.md)
 * [附录](./remark_note/README.md)
   * [PEP-3132](./PEP-3132.md)
 * [Anoconda](./Anoconda/.README.MD)
