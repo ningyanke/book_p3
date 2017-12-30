@@ -60,6 +60,7 @@
       * [描述符指南](./class/class_descriptor.md)
     * 类的私有属性
     * 元编程
+    * [调试](./class/class_debug.md)
 * [文件](./files/README.md)
     * [文件操作](./files/file_input_output.md)
 * [Python 编程之计算生态](./computational_thinking/README.md)
