@@ -5,4 +5,5 @@
 > 5. `Frame` 控件
 > 6. `Button` 控件
 > 7. `Checkbutton, Rediobutton`
+> 8. `Entry` 控件
 
