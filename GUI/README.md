@@ -1,0 +1,1 @@
+https://github.com/cundi/Python-PySide-PyQt-Tutorial
