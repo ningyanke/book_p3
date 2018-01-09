@@ -14,6 +14,7 @@
 > - 8.后台进程
 > - 9.ThreadLocal
 > - 10.异步
+> - 11.线程池
 >
 > 进程
 >
@@ -25,7 +26,7 @@
 > - 6.Queue
 > - 7.Pipe
 > - 8.Pool
-> - ​
+> - ​9.进程共享
 
 http://blog.51cto.com/11026142/category1.html
 
