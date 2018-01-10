@@ -10,5 +10,6 @@
 > 10. `Scrollbar` 控件
 > 11. `Scall` 控件
 > 12. `Text` 文本
-> 13. ​
+> 13. `Event`控件
+> 14. `Canvas` 画布控件​
 

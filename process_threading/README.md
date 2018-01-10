@@ -26,7 +26,8 @@
 > - 6.Queue
 > - 7.Pipe
 > - 8.Pool
-> - ​9.进程共享
+> - 9.进程共享
+> - 10.分布式进程
 
 http://blog.51cto.com/11026142/category1.html
 
