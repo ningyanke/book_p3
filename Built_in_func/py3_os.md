@@ -56,6 +56,9 @@
 > | os.path.join(path,name)               | 连接目录与文件名或目录                              |
 > | os.path.basename(path)                | 返回文件名                                    |
 > | os.path.dirname(path)                 | 返回文件路径                                   |
+> | os.path.walk                          |                                          |
+> | os.path.normpath(path)                | 规范化路径，消除双斜线，windows用的多                   |
+> | os.path.normcase(path)                | 规范化路径名,posix系统无效                         |
 
 ### 5.文件和目录的属性
 
@@ -71,7 +74,90 @@
 > |                      |            |
 > |                      |            |
 >
-> 
+
+#### os.path.walk
+
+> 有一个如下所示的目录树
+>
+> ```bash
+> (python35) ningyanke@NYKpython:~/python3_learn/MOOC/week9/program$ tree -a
+> .
+> ├── bigpy_dir.py
+> ├── bigpy-tree.py
+> ├── .spyproject
+> │   ├── codestyle.ini
+> │   ├── encoding.ini
+> │   ├── vcs.ini
+> │   └── workspace.ini
+> ├── subtest1
+> │   ├── test1_doc.txt
+> │   └── thiredlayer
+> │       └── test1_dox.txt
+> ├── subtest2
+> │   └── test2_doc.txt
+> ├── 管道.py
+> └── 数组.py
+> ```
+>
+> 利用`os.walk` 去遍历其中的每一个文件
+>
+> ```python
+> os.walk(top, topdown = True, onerror = None, followlinks = False)
+> ```
+>
+> ```python
+> import os
+>
+> dirname = '/home/ningyanke/python3_learn/MOOC/week9/program/'
+>
+> for root, dirs, files in os.walk(dirname):
+>     print("----------------------")
+>     print('root:', root)
+>     print('dirs:', dirs)
+>     print('files:', files)
+>     print('----------------------')
+> ```
+>
+> ```python
+> (python35) ningyanke@NYKpython:~/python3_learn/MOOC/week9/program$ python bianli1.py 
+> ----------------------
+> root: /home/ningyanke/python3_learn/MOOC/week9/program/
+> dirs: ['subtest2', '.spyproject', 'subtest1']
+> files: ['bigpy-tree.py', 'bigpy_dir.py', '管道.py', 'bianli1.py', '数组.py']
+> ----------------------
+> ----------------------
+> root: /home/ningyanke/python3_learn/MOOC/week9/program/subtest2
+> dirs: []
+> files: ['test2_doc.txt']
+> ----------------------
+> ----------------------
+> root: /home/ningyanke/python3_learn/MOOC/week9/program/.spyproject
+> dirs: []
+> files: ['encoding.ini', 'codestyle.ini', 'workspace.ini', 'vcs.ini']
+> ----------------------
+> ----------------------
+> root: /home/ningyanke/python3_learn/MOOC/week9/program/subtest1
+> dirs: ['thiredlayer']
+> files: ['test1_doc.txt']
+> ----------------------
+> ----------------------
+> root: /home/ningyanke/python3_learn/MOOC/week9/program/subtest1/thiredlayer
+> dirs: []
+> files: ['test1_dox.txt']
+> ----------------------
+> ```
+>
+> 可以看出它是分层次的去遍历显示文件:
+>
+> 结果分析
+>
+> 1，先从根目录进行遍历，读取跟目录的文件夹和文件。
+>
+> 2，以根目录第一个子目录为新的根目录，读取其文件夹和文件。
+>
+> 3，再以2中的第一个子文件夹为根目录，读取文件夹和文件
+>
+> 4，读取1步骤里面其他子目录的文件夹和文件。
 
 ### 实例将放入`Jupter 笔记本 ` 
 
