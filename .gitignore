@@ -5,7 +5,7 @@ node_modules/*
 *~
 _book
 .DS_Store
-
+*.pyc
 app/.DS_Store
 
 # Logs
