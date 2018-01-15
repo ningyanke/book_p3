@@ -14,4 +14,6 @@
 > 14. `Canvas` 画布控件
 > 15. `Menu` 菜单栏
 > 16. 标准属性
+> 17. `tkinter效果`
+> 18. `Mastermind` 猜测游戏
 
