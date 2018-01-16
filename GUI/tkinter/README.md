@@ -20,4 +20,6 @@
 > 20. ` tkinter.messagebox` 消息控件
 > 21. `tkinter.filedialog`文件选择对话框
 > 22. `tkinter.colorchooser` 颜色选取
-> 23. .
+> 23. 写一个笔记本应用
+> 24. ​
+
