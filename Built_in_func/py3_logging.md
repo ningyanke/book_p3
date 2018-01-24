@@ -31,7 +31,7 @@
 ### 一个简单的例子
 
 > ```python
-> 	#!/usr/local/bin/python
+> #!/usr/local/bin/python
 > # -*- coding:utf-8 -*-
 > import logging
 > 	logging.debug('debug message')
