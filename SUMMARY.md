@@ -110,6 +110,8 @@
     * [docopt](./other_model/docopt.md)
     * [pdir2](./other_model/pdir2.md)
     * [PIL](./other_model/PIL/pillow.md)
+    * [tqdn](./other_model/tqdn.md)
+    * [openpyxl](./other_model/office/openpyxl.md)
 * [附录](./remark_note/README.md)
   * [PEP-3132](./PEP-3132.md)
 * [Anoconda](./Anoconda/.README.MD)
