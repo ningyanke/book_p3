@@ -40,3 +40,7 @@ num = struct.unpack('!HH', recvmsg1[:4])
 print(num)
 ackmsg = struct.pack('!HH', 4, num[1])
 clisocket.sendto(ackmsg, ip_port)
+
+# 写入文件
+with open(filename, 'bw') as f:
+    f.write(recvmsg1[4:])
